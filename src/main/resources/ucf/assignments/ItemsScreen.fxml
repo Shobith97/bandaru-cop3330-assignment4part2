@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="493.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ItemsController">
+   <children>
+      <Label layoutX="95.0" layoutY="32.0" text="Item">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="descriptionTA" layoutX="22.0" layoutY="183.0" prefHeight="157.0" prefWidth="200.0" promptText="Enter description" />
+      <Button layoutX="22.0" layoutY="411.0" mnemonicParsing="false" onAction="#onAddButtonClick" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: blue;" text="Add" textFill="WHITE" />
+      <Button layoutX="88.0" layoutY="411.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" style="-fx-background-color: yellow;" text="Update" />
+      <Button layoutX="170.0" layoutY="411.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" style="-fx-background-color: red;" text="Delete" textFill="WHITE" />
+      <ListView fx:id="itemsLV" layoutX="328.0" layoutY="130.0" prefHeight="317.0" prefWidth="322.0" />
+      <Label layoutX="458.0" layoutY="32.0" text="All items">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idTL" layoutX="23.0" layoutY="91.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter id" />
+      <ChoiceBox fx:id="completeCB" layoutX="23.0" layoutY="361.0" prefHeight="25.0" prefWidth="200.0" />
+      <DatePicker fx:id="dueDateL" layoutX="20.0" layoutY="140.0" prefHeight="25.0" prefWidth="200.0" promptText="Select due date" />
+      <Label layoutX="328.0" layoutY="81.0" text="Show by">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="601.0" layoutY="459.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
+      <ChoiceBox fx:id="showCB" layoutX="451.0" layoutY="78.0" prefWidth="150.0" />
+      <Button layoutX="466.0" layoutY="459.0" mnemonicParsing="false" onAction="#onSaveBtnClick" text="Save to external file" />
+   </children>
+</AnchorPane>
