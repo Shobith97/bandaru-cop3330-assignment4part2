@@ -62,7 +62,7 @@ public class TodoListController implements Initializable {
     @FXML
     void onAddButtonClick(ActionEvent event) {
         if (!titleL.getText().isEmpty() && !idL.getText().isEmpty()) {
-            Todo list = new Todo(idL.getText().toString(), titleL.getText().toString());
+            Todo list = new Todo();
 
             if(!isExists(idL.getText())){
                 lists.add(list);
@@ -173,7 +173,7 @@ public class TodoListController implements Initializable {
             String id = split[0];
             String title = split[1];
             int size = Integer.parseInt(split[2]);
-            todo = new Todo(id, title);
+            todo = new Todo();
 
             while (scanner.hasNextLine()) {
                 String s = scanner.nextLine();
@@ -184,7 +184,7 @@ public class TodoListController implements Initializable {
                     String date = split[2];
                     boolean complete = Boolean.parseBoolean(split[3]);
                     size--;
-                    item = new Item(id, description, date);
+                    item = new Item();
                     if (complete) {
                         item.setComplete(true);
                     }
@@ -193,7 +193,7 @@ public class TodoListController implements Initializable {
                     CONSTANTS.todos.addToDo(todo);
                     title = split[1];
                     size = Integer.parseInt(split[2]);
-                    todo = new Todo(id, title);
+                    todo = new Todo();
                 }
             }
             CONSTANTS.todos.addToDo(todo);

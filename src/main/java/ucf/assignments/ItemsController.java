@@ -18,14 +18,12 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
-import java.util.Scanner;
 
 public class ItemsController implements Initializable {
     @FXML
@@ -150,7 +148,7 @@ public class ItemsController implements Initializable {
             if (descriptionTA.getText().length() < 256) {
 
                 LocalDate value = dueDateL.getValue();
-                Item item = new Item(idTL.getText().toString(), descriptionTA.getText().toString(), value.toString());
+                Item item = new Item();
                 if (completeCB.getSelectionModel().getSelectedIndex() == 0) {
                     item.setComplete(true);
                 } else {
@@ -158,7 +156,7 @@ public class ItemsController implements Initializable {
                 }
 
                 if (!isExists(idTL.getText())) {
-                    CONSTANTS.todo.addItem(new Item(idTL.getText().toString(), descriptionTA.getText().toString(), value.toString()));
+                    CONSTANTS.todo.addItem(new Item());
                     items.add(item);
                 }
 

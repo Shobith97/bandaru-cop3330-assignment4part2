@@ -9,7 +9,7 @@ public class Item {
     private String dueDate;
     private boolean isComplete;
 
-    public Item(String id, String description, String dueDate) {
+    public Item() {
         this.id = id;
         this.description = description;
         this.dueDate = dueDate;
